@@ -1,0 +1,19 @@
+.transparentNavbar{
+    opacity: 1;
+    transition: all .25s ease-in-out;
+    background: transparent !important;
+    box-shadow: none !important;
+    transition: all .25s ease-in-out;
+    
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-bottom: 0;
+    border: none;
+    min-height: 55px;
+    z-index: 10;
+}
+.transparentNavbar.whiteNavbar {
+    background: white !important;
+    box-shadow: 1px 1px 1px #ccc !important;
+}

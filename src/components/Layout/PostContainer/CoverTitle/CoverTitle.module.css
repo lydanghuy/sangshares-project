@@ -1,0 +1,52 @@
+/* Cover area */
+.articleCover{
+    background-image: url('../../../../images/posts/Layer-9.png');
+    background-attachment: fixed;
+    display: flex;
+    align-items: flex-end;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    min-height: 0;
+    position: relative;
+}
+.coverImageGradient{
+    background: linear-gradient(to right, rgba(0,0,0,0.4) 0%, rgbs(0,0,0,0) 60%);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 0;
+}
+
+.articleCoverTitle{
+    margin: 35px 50px 100px;
+    color: #fff;
+}
+.titleWrapper{
+    min-width: 370px;
+    max-width: 675px;
+    display: inline-block;
+    position: relative;
+}
+.category{
+    margin-bottom: 34px;
+    color: var(--main-brand-color-theme);
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+.title{
+    font-size: 52px;
+    font-weight: bold;
+    line-height: 56px;
+    margin: 0 0 20px;
+}
+.articleCoverSummary , .authorText , .authorText p{
+    color: #fff;
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 26px;
+    margin-bottom: 20px;
+}

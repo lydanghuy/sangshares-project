@@ -1,0 +1,73 @@
+@media (min-width: 1090px) {
+    .container{
+        /* position: relative;
+        margin-left: 20px;
+        margin-right: 20px;
+        min-width: 1000px; 
+        width: auto;
+        padding-right: 15px;
+        padding-left: 15px;
+        height: auto;
+        overflow: visible; */
+        position: relative;
+        width: 100%;
+        max-width: 1090px;
+        margin: 0 auto;
+        padding: 0 15px;
+    /* }
+    .navbarBrand{
+        margin-left: -15px;
+        float: left;
+        padding: 8px 15px;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .navbarBrand>img{
+        display: block;
+
+    } */
+    
+}
+
+/* Mobile Header */
+/* @media (max-width: 1090px) {
+    .websiteNavbar{
+        display: block !important;
+        height: auto !important;
+        overflow: hidden !important;
+        padding-bottom: 0;
+        width: auto;
+        border-top: 0;
+        position: relative;
+        z-index: 20;
+        padding: 0;
+        background-color: white;
+        box-shadow: 1px 1px 1px #ccc;
+    }
+    .container{
+        position: relative;
+        margin: 0 10px;
+        max-width: 1030px;
+        padding: 0 15px;
+        height: auto;
+        overflow: hidden;
+        display: block;
+    }
+    .navbarBrand{
+        height: 55px;
+        padding: 15px;
+        padding-bottom: 20px;
+        padding-top: 10px;
+        position: relative;
+        font-size: 18px;
+        line-height: 20px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: max-content;
+        cursor: pointer;
+    }
+    .navbarBrand>img{
+        display: block;
+    }
+} */

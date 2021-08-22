@@ -1,0 +1,34 @@
+.footerWeb{
+    position: fixed;
+    display: flex;
+    padding: 10px 0;
+    bottom: 0px;
+    height: auto;
+    width: 100%;
+    background-color: whitesmoke;
+    background-clip: border-box;
+    border-top: 2px solid #ccc;
+    justify-content: space-between;
+}
+.smallLogo{
+    position: absolute;
+    right:50%
+}
+.footerSocial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footerSocial .socialLogo{
+    color: rgb(99, 99, 99);
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    
+}
+.copyrights{
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
