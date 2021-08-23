@@ -2,7 +2,7 @@
     .innercontainer{
         display: flex !important;
         justify-content: space-between !important;
-        padding: 10px 0;
+        padding: 5px 0;
         align-items: center !important;
     }
     .desktopNavbar{
@@ -22,9 +22,6 @@
         justify-content: space-between;
     }
     .navbarMenuItem{
-        /* position: relative;
-        display: inline-block;
-        margin: 0 10px; */
         display: flex;
         align-items: center;
         padding: 3px 0;
@@ -118,37 +115,42 @@
         width: auto;
         align-items: center;
     }
-    .navbarSearch{
-        padding: 0 10px;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        width: auto;
+    
+    .socialSearch{
+        position: relative;
+        z-index: 2;
+    }
+    .searchInput{
+        position: absolute;
+        z-index: 1;
+        display: block;
+        right: -5px;
+        top: 5px;
     }
     .searchBar{
         display: inline-block;
         vertical-align: middle;
-        border: 1px solid white;
-        color:  white;
+        color:  var(--gray);
         text-shadow: 0 0 1px #ccc !important;
-        background: none;
-        border-radius: 3px;
-        transition: all 0.25s ease-in-out;
-        width: 200px;
+        background: white;
+        border-radius: 8px;
+        transition: all .5s ease-in-out;
+        width: 0;
         line-height: 20px;
         height: 34px;
-        padding: 6px 12px;
         font-size: 14px;
     }
-
-    .searchInput{
-        display: none;
+    .searchBar.active{
+        width: 600px !important;
+        border: 2px solid var(--gray);
+        padding: 6px 35px 6px 12px;
     }
     .searchBar.whiteHeader{
         border: 1px solid #4a4a4a;
         color:  #4a4a4a;
     }
     .searchBar::placeholder{
-        color: white;
+        color: var(--gray);
     }
     .searchBar.whiteHeader::placeholder{
         color: #4a4a4a;
@@ -159,8 +161,9 @@
     }
     
     .socialLogo{
-        color: black;
-        opacity: 0.7;
+        color: var(--gray-dark);
+        display: flex;
+        align-items: center;
         font-size: 11px;
         line-height: 0;
         cursor: pointer;
@@ -168,24 +171,37 @@
     }
     .socialLogo:first-child{
         position: relative;
-        display: flex;
-        align-items: center;
+        z-index: 2;
         height: 41px;
         text-align: center;
         vertical-align: middle;
     }
     .fbLogo, .igLogo{
-        margin-left: 10px;
+        height: 41px;
+        margin-left: 15px;
         font-size: 13px;
     }
     .socialLogo.whiteHeader{
         color:#4a4a4a
     }
-    .socialLogo:hover{
+    .socialLogo:not(:first-child):hover{
         color: var(--main-brand-color-theme);
         transition: all .25s ease-in-out;
     }
-    
+    .avatar{
+        margin-left: 25px;
+        background-image: url('../../../../images/avatar/sss-avatar.jpg');
+        background-size: 50px 50px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50px;
+        transition: all .15s linear;
+        background-position: 50%;
+    }
+    .avatar:hover {
+        transform: scale(105%);
+        transition: all .15s linear;
+    }
 }
 
 /* Mobile Header */
