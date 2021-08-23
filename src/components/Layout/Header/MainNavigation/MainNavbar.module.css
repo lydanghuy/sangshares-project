@@ -1,31 +1,11 @@
 @media (min-width: 1090px) {
     .container{
-        /* position: relative;
-        margin-left: 20px;
-        margin-right: 20px;
-        min-width: 1000px; 
-        width: auto;
-        padding-right: 15px;
-        padding-left: 15px;
-        height: auto;
-        overflow: visible; */
         position: relative;
         width: 100%;
-        max-width: 1090px;
+        max-width: 1200px;
         margin: 0 auto;
         padding: 0 15px;
-    /* }
-    .navbarBrand{
-        margin-left: -15px;
-        float: left;
-        padding: 8px 15px;
-        font-size: 18px;
-        line-height: 20px;
-    }
-    .navbarBrand>img{
-        display: block;
-
-    } */
+     }
     
 }
 

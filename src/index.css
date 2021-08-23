@@ -5,6 +5,7 @@
 }
 *, *::before, *::after {
 border-width: 0;
+box-sizing: border-box;
 }
 #root{
   height: 100%;
@@ -43,44 +44,56 @@ border-width: 0;
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-Regular.otf);
-  font-weight: normal;
+  font-weight: 300;
 }
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-Italic.otf);
-  font-style: italic;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: local('Poppins'), url(./fonts/poppins/Poppins-Medium.otf);
-  font-weight: bold;
-}
-@font-face {
-  font-family: 'Poppins';
-  src: local('Poppins'), url(./fonts/poppins/Poppins-MediumItalic.otf);
-  font-weight: bold;
+  font-weight: 300;
   font-style: italic;
 }
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-Bold.otf);
-  font-weight: bolder;
+  font-weight: 700;
 }
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-BoldItalic.otf);
-  font-weight: bolder;
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/poppins/Poppins-ExtraBold.otf);
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/poppins/Poppins-BoldItalic.otf);
+  font-weight: 900;
   font-style: italic;
 }
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-Light.otf);
-  font-weight: lighter;
+  font-weight: 100;
 }
 @font-face {
   font-family: 'Poppins';
   src: local('Poppins'), url(./fonts/poppins/Poppins-LightItalic.otf);
-  font-weight: lighter;
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/poppins/Poppins-SemiBold.otf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'Poppins';
+  src: local('Poppins'), url(./fonts/poppins/Poppins-SemiBoldItalic.otf);
+  font-weight: 500;
   font-style: italic;
 }
 
@@ -116,7 +129,7 @@ html{
 }
 body{
   overflow-x: hidden;
-  background-color: var(--gray-dark);
+  background-color: var(--yellow);
   font-size: 13px;
   line-height: 1.5;
   font-family: 'Poppins';

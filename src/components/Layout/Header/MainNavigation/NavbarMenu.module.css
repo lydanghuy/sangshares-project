@@ -1,32 +1,66 @@
 @media (min-width: 1090px) {
-    .container{
-        position: relative;
-        display: inline !important;
-        /* float: right; */
-        margin-left: auto;
-        margin-right: auto;
+    .innercontainer{
+        display: flex !important;
+        justify-content: space-between !important;
+        padding: 10px 0;
+        align-items: center !important;
+    }
+    .desktopNavbar{
+        display: block !important;
+    }
+    .navbarBrand>img{
+        margin-right: 40px;
     }
     .navbarMenu{
+        display: inline-flex;
+        flex-wrap: wrap;
         position: relative;
-        float:left;
-        margin: 0;
-        padding: 0;
         list-style: none;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+        justify-content: space-between;
     }
     .navbarMenuItem{
-        position: relative;
+        /* position: relative;
         display: inline-block;
-        /* float: left; */
-        margin: 0 10px;
+        margin: 0 10px; */
+        display: flex;
+        align-items: center;
+        padding: 3px 0;
+    }
+    .navbarMenuItem:not(:last-child){
+        margin-right: 20px;
     }
     
     .navbarMenuItem .firstItem{
-        border-bottom: 5px solid var(--main-brand-color-theme);
+        background: url('../../../../images/brand/sssomething-logo-1.png') no-repeat;
+        background-size: 20px 20px;
+        border-bottom: 3px solid var(--main-brand-color-theme);
     }
-    
+    .navbarMenuItem:first-child a{
+        color: var(--main-brand-color-theme);
+        padding-left: 25px;
+    }
+    .navbarMenuItem>a{
+        position: relative;
+        color: var(--dark);
+        opacity: 0.7;
+        font-size: 15px;
+        /* text-shadow: 0px 0px 1px #ccc !important; */
+        font-weight: 500;
+        padding-bottom: 8px;
+        border-bottom: 5px solid transparent;
+        letter-spacing: 0.9px;
+        transition: color .15s ease-in-out;
+    }
+
+    .navbarMenuItem.whiteHeader>a{
+        color: #4a4a4a;
+    }
     .navbarMenuItem:last-child a{
         color: var(--main-brand-color-theme) !important;
-        text-shadow: 0 0 10px gray !important;
+        transition: all .15s linear;
     }
     .subMenu{
         margin-top: 0;
@@ -46,23 +80,24 @@
         box-shadow: 0 6px 12px rgb(0 0 0 / 18%);
         visibility: hidden;
         opacity: 0;
-        transition: all 0.25s ease-in-out;
+        transition: all 0.15s ease-in-out;
     }
     
     .subMenu>li>a{
         padding: 5px 20px;
-        color: #777777;
+        color: #777777 !important;
         display: block;
-        font-weight: 400;
+        font-weight: normal;
         line-height: 1.428571429;
         white-space: nowrap;
     }
     .navbarMenuItem a:hover  {
         color: var(--main-brand-color-theme) !important;
-        transition: all .25s ease-in-out;
+        transition: color .15s linear;
     }
     .navbarMenuItem:last-child a:hover{
-        color: #4a4a4a !important;
+        text-shadow: 0 0 10px var(--main-brand-color-theme);
+        transition: all .15s linear;
     }
     .navbarMenuItem:hover .subMenu{
         visibility: visible;
@@ -71,33 +106,17 @@
     }
     .subMenu>li>a:hover{
         background-color: #cecece2f;
-        color: black;
+        color: black !important;
         transition: all .15s ease;
     }
     
-    .navbarMenuItem>a{
-        display: block;
-        color: white;
-        text-shadow: 0px 0px 1px #ccc !important;
-        box-shadow: none;
-        font-weight: 600;
-        padding: 20px 5px 10px;
-        border-bottom: 5px solid transparent;
-        letter-spacing: 0.5px;
-        line-height: 20px;
-        transition: all .25s ease-in-out;
-    }
+   
 
-    .navbarMenuItem.whiteHeader>a{
-        color: #4a4a4a;
-    }
-
-    .socialSearch{
+    .social{
         display: flex;
         float: right;
         width: auto;
         align-items: center;
-        margin-top: 10px;
     }
     .navbarSearch{
         padding: 0 10px;
@@ -105,7 +124,7 @@
         border-bottom: 1px solid transparent;
         width: auto;
     }
-    .searchQuery{
+    .searchBar{
         display: inline-block;
         vertical-align: middle;
         border: 1px solid white;
@@ -120,42 +139,50 @@
         padding: 6px 12px;
         font-size: 14px;
     }
-    .searchQuery.whiteHeader{
+
+    .searchInput{
+        display: none;
+    }
+    .searchBar.whiteHeader{
         border: 1px solid #4a4a4a;
         color:  #4a4a4a;
     }
-    .searchQuery::placeholder{
+    .searchBar::placeholder{
         color: white;
     }
-    .searchQuery.whiteHeader::placeholder{
+    .searchBar.whiteHeader::placeholder{
         color: #4a4a4a;
     }
-    .searchQuery:focus{
+    .searchBar:focus{
         outline: none;
         border-color: var(--main-brand-color-theme);
     }
     
     .socialLogo{
-        color: white;
-        font-size: 18px;
+        color: black;
+        opacity: 0.7;
+        font-size: 11px;
         line-height: 0;
         cursor: pointer;
-        padding: 10px 5px;
-        margin: 0 5px
+        transition: all .25s ease-in-out;
+    }
+    .socialLogo:first-child{
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 41px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .fbLogo, .igLogo{
+        margin-left: 10px;
+        font-size: 13px;
     }
     .socialLogo.whiteHeader{
         color:#4a4a4a
     }
-    .igLogo{
-        opacity: 1;
-        transition: all .25s ease-in-out;
-    }
-    .fbLogo{
-        opacity: 1;
-        transition: all .25s ease-in-out;
-    }
     .socialLogo:hover{
-        opacity: 0.6;
+        color: var(--main-brand-color-theme);
         transition: all .25s ease-in-out;
     }
     

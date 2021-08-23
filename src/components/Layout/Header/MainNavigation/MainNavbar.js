@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 
-import logo from '../../../../images/brand/sssomething-logo.png'
-import { HamButton } from './HamButton'
+// import logo from '../../../../images/brand/sssomething-logo.png'
+// import { HamButton } from './HamButton'
 import styles from './MainNavbar.module.css'
 import NavbarMenu from './NavbarMenu'
 

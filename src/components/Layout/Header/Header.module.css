@@ -1,8 +1,10 @@
 .transparentNavbar{
     opacity: 1;
     transition: all .25s ease-in-out;
-    background: transparent !important;
-    box-shadow: none !important;
+    /* background: transparent !important;
+    box-shadow: none !important; */
+    background: white !important;
+    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%) !important;
     transition: all .25s ease-in-out;
     
     position: fixed;
@@ -11,7 +13,7 @@
     margin-bottom: 0;
     border: none;
     min-height: 55px;
-    z-index: 10;
+    z-index: 100;
 }
 .transparentNavbar.whiteNavbar {
     background: white !important;
