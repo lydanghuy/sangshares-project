@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import styles from './NavbarMenu.module.css'
@@ -6,12 +6,15 @@ import styles from './NavbarMenu.module.css'
 function NavbarMenu(props) {
     const openNavbarMenu = (props.classNameCus === 'openNavbarMenu' ? styles.openNavbarMenu : '');
 
-    // const [isOpenMenu, setOpenMenu] = useState(false);
+    //const [isOpenMenu, setOpenMenu] = useState(false);
     // const openMenu = () => {
     //     setOpenMenu(!isOpenMenu);
     // }
     // const openNavMenu = (isOpenMenu ? 'openNavbarMenu' : '')
-
+    const [isOpenSearch, setOpenSearch] = useState(false);
+    const openSearchBar = () =>{
+        setOpenSearch(!isOpenSearch);
+    }
     return (
 
         <div className={`${openNavbarMenu} ${styles.innercontainer}`}>
@@ -51,14 +54,12 @@ function NavbarMenu(props) {
             
             
             <div className={styles.social}>
-                {/* <form action="/search" method="GET" className={styles.navbarSearch} role="search">
-                    <input type="text" className={`${styles.searchQuery} ${props.whiteHeader === 'true' ? styles.whiteHeader:''}`} name="q" placeholder="Search something"></input>
-                </form> */}
-                <div className={styles.socialSearch}>
-                    <div className={`${styles.searchIcon} ${styles.socialLogo}`}><i className="fas fa-search fa-2x"></i></div>
+                <div className={styles.socialSearch} >
+                    <div className={`${styles.searchIcon} ${styles.socialLogo}`} onClick={openSearchBar}><i className="fas fa-search fa-2x"></i></div>
                     <div className={styles.searchInput} role="search">
-                       <input type="search" className={`${styles.searchBar} ${props.whiteHeader === 'true' ? styles.whiteHeader:''}`} name="q" placeholder="Search something"></input>
+                        <input type="search" className={`${styles.searchBar} ${isOpenSearch?styles.active:null} ${props.whiteHeader === 'true' ? styles.whiteHeader:''}`} name="q" placeholder="Search something"></input>
                     </div>
+                    
                 </div>
                 <a href="https://www.facebook.com/sang.tp.11296" rel="noopener noreferrer" className={`${styles.fbLogo} ${styles.socialLogo} ${props.whiteHeader === 'true' ? styles.whiteHeader:''}`} target="_blank">
                     <i className="fab fa-facebook-square fa-2x"></i>
@@ -66,7 +67,7 @@ function NavbarMenu(props) {
                 <a href="https://www.instagram.com/nguoidiban.mua/" rel="noopener noreferrer" className={`${styles.igLogo} ${styles.socialLogo} ${props.whiteHeader === 'true' ? styles.whiteHeader:''}`} target="_blank">
                     <i className="fab fa-instagram fa-2x"></i>
                 </a>
-                
+                <Link className={styles.avatar} to='/about'></Link>
             </div>
         </div>
     )
