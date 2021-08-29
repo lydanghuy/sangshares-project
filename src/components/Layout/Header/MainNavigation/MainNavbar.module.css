@@ -10,44 +10,11 @@
 }
 
 /* Mobile Header */
-/* @media (max-width: 1090px) {
-    .websiteNavbar{
-        display: block !important;
-        height: auto !important;
-        overflow: hidden !important;
-        padding-bottom: 0;
-        width: auto;
-        border-top: 0;
-        position: relative;
-        z-index: 20;
-        padding: 0;
-        background-color: white;
-        box-shadow: 1px 1px 1px #ccc;
-    }
+@media screen and (max-width: 999px) {
     .container{
         position: relative;
-        margin: 0 10px;
-        max-width: 1030px;
-        padding: 0 15px;
-        height: auto;
-        overflow: hidden;
-        display: block;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1000px;
     }
-    .navbarBrand{
-        height: 55px;
-        padding: 15px;
-        padding-bottom: 20px;
-        padding-top: 10px;
-        position: relative;
-        font-size: 18px;
-        line-height: 20px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        width: max-content;
-        cursor: pointer;
-    }
-    .navbarBrand>img{
-        display: block;
-    }
-} */
+}

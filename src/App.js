@@ -4,14 +4,10 @@ import Blog from "./Pages/Blog/Blog";
 import BlogPosts from "./Pages/Blog/BlogPosts/BlogPosts";
 import Gallery from "./Pages/Gallery/Gallery";
 import Home from "./Pages/Home/Home";
-import Header from './components/Layout/Header/Header'
-
-
-
+import Write from "./Pages/Write/Write";
 function App() {
   return (
     <Router>
-      <Header/>
       <Switch>
         <Route path="/" exact={true}>
           <Home/>
@@ -27,6 +23,9 @@ function App() {
         </Route>
         <Route path="/post/1">
            <BlogPosts/>
+        </Route>
+        <Route path="/write">
+          <Write/>
         </Route>
       </Switch>
     </Router>

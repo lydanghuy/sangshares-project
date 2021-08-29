@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Footer.module.css'
-import logo from '../../../images/brand/sssomething-logo-2.png'
+import {ReactComponent as Logo} from '../../../images/brand/sssomething-logo-2.svg'
 function Footer(props) {
     return (
         <footer className={styles.footerWeb}>
@@ -9,7 +9,7 @@ function Footer(props) {
                 Copyright © 2021 SangSharesSomething. All Rights Reserved.
             </span>
             <Link to='/' className={styles.smallLogo}>
-                <img className={styles.logoimg} alt='SangSharesSomething Logo' src={logo} style={{height:50,width:'auto'}}></img>
+                <Logo/>
             </Link>
             <div className={styles.footerSocial}>
             <a href="https://www.facebook.com/sang.tp.11296" rel="noopener noreferrer" className={styles.socialLogo} target="_blank">

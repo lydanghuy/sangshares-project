@@ -1,5 +1,5 @@
 .footerWeb{
-    position: fixed;
+    position: relative;
     display: flex;
     padding: 10px 0;
     bottom: 0px;
@@ -12,8 +12,17 @@
 }
 .smallLogo{
     position: absolute;
-    right:50%
+    right:50%;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
+.smallLogo svg{
+    height: 30px;
+    width: 30px
+
+}
+
 .footerSocial{
     display: flex;
     align-items: center;
@@ -23,8 +32,7 @@
     color: rgb(99, 99, 99);
     font-size: 20px;
     padding: 5px;
-    margin: 5px;
-    
+    margin-left: 5px;
 }
 .copyrights{
     padding-left: 20px;

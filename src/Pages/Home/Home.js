@@ -1,7 +1,7 @@
 import React from 'react'
-// import Footer from '../../components/Layout/Footer/Footer'
+import Footer from '../../components/Layout/Footer/Footer'
 import Header from '../../components/Layout/Header/Header'
-// import HomeContainer from '../../components/Layout/HomeContainer/HomeContainer'
+import HomeContainer from '../../components/Layout/HomeContainer/HomeContainer'
 import './Home.css'
 
 export default function Home() {
@@ -10,8 +10,8 @@ export default function Home() {
             <div className="main-content">
                 <Header/>
 
-                {/* <HomeContainer/> */}
-                {/* <Footer/> */}
+                <HomeContainer/>
+                <Footer/>
             </div>
         </div>
     )

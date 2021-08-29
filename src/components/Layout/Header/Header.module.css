@@ -1,21 +1,42 @@
-.transparentNavbar{
-    opacity: 1;
-    transition: all .25s ease-in-out;
-    /* background: transparent !important;
-    box-shadow: none !important; */
-    background: white !important;
-    box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%) !important;
-    transition: all .25s ease-in-out;
-    
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-bottom: 0;
-    border: none;
-    min-height: 55px;
-    z-index: 100;
+/* Big screen */
+@media screen and (min-width:1000px) {
+    .transparentNavbar{
+        opacity: 1;
+        transition: all .25s ease-in-out;
+        /* background: transparent !important;
+        box-shadow: none !important; */
+        background: transparent !important;
+        box-shadow: none !important;
+        transition: all .25s ease-in-out;
+        
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin-bottom: 0;
+        border: none;
+        min-height: 55px;
+        z-index: 100;
+    }
+    .transparentNavbar.whiteNavbar {
+        background: white !important;
+        box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%) !important;
+    }
+    .hide{
+        top:-60px !important;
+    }
 }
-.transparentNavbar.whiteNavbar {
-    background: white !important;
-    box-shadow: 1px 1px 1px #ccc !important;
+
+/* Mobile screen */
+@media screen and (max-width:999px) {
+    .transparentNavbar{
+
+        position: fixed;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        z-index: 100;
+        background: white !important;
+        box-shadow: 0 4px 12px 0 rgb(0 0 0 / 10%) !important;
+        transition: all .25s ease-in-out;
+    }
 }

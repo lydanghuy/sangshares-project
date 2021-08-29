@@ -1,4 +1,10 @@
+.logo{
+    display: none;
+}
 @media (min-width: 1000px) {
+    .mobileNavbar{
+        display: none;
+    }
     .innercontainer{
         display: flex !important;
         justify-content: space-between !important;
@@ -6,7 +12,7 @@
         align-items: center !important;
     }
     .desktopNavbar{
-        display: block !important;
+        display: block;
     }
     .navbarBrand>img{
         margin-right: 40px;
@@ -29,34 +35,32 @@
     .navbarMenuItem:not(:last-child){
         margin-right: 20px;
     }
-    
     .navbarMenuItem .firstItem{
         background: url('../../../../images/brand/sssomething-logo-1.png') no-repeat;
         background-size: 20px 20px;
-        border-bottom: 3px solid var(--main-brand-color-theme);
-    }
-    .navbarMenuItem:first-child a{
-        color: var(--main-brand-color-theme);
-        padding-left: 25px;
     }
     .navbarMenuItem>a{
         position: relative;
-        color: var(--gray);
+        color: white;
         font-size: 15px;
-        /* text-shadow: 0px 0px 1px #ccc !important; */
         font-weight: 500;
-        padding-bottom: 8px;
-        border-bottom: 5px solid transparent;
+        padding-bottom: 7px;
+        border-bottom: 4px solid transparent;
         letter-spacing: 0.9px;
         transition: color .1s ease-in-out;
     }
-
     .navbarMenuItem.whiteHeader>a{
-        color: #4a4a4a;
+        color: var(--gray) ;
+    }
+    .firstItem{
+        color: var(--main-brand-color-theme) !important;
+        padding-left: 25px;
+        border-bottom: 4px solid var(--main-brand-color-theme) !important;
     }
     .navbarMenuItem:last-child a{
         color: var(--main-brand-color-theme) !important;
         transition: all .1s linear;
+        opacity: 1 !important;
     }
     .subMenu{
         margin-top: 0;
@@ -87,9 +91,14 @@
         line-height: 1.428571429;
         white-space: nowrap;
     }
-    .navbarMenuItem a:hover  {
+    .navbarMenuItem.whiteHeader a:hover  {
         color: var(--main-brand-color-theme) !important;
+        opacity: .9 !important;
         transition: color .15s linear;
+    }
+    .navbarMenuItem a:hover{
+        opacity: .6;
+        color: var(--gray) ;
     }
     .navbarMenuItem:last-child a:hover{
         text-shadow: 0 0 1px var(--main-brand-color-theme);
@@ -142,10 +151,9 @@
     .searchBar.active{
         width: 600px !important;
         border: 2px solid #919191;
-        padding: 6px 35px 6px 12px;
+        padding: 4px 26px 6px 12px;
     }
     .searchBar.whiteHeader{
-        border: 1px solid #4a4a4a;
         color:  #4a4a4a;
     }
     .searchBar::placeholder{
@@ -160,13 +168,16 @@
     }
     
     .socialLogo{
-        color: var(--gray-dark);
+        color: var(--gray);
         display: flex;
         align-items: center;
         font-size: 11px;
         line-height: 0;
         cursor: pointer;
         transition: all .25s ease-in-out;
+    }
+    .socialLogo.whiteHeader{
+        color: var(--gray-dark) !important;
     }
     .socialLogo:first-child{
         position: relative;
@@ -179,9 +190,6 @@
         height: 41px;
         margin-left: 15px;
         font-size: 13px;
-    }
-    .socialLogo.whiteHeader{
-        color:#4a4a4a
     }
     .socialLogo.fbLogo:hover{
         color: var(--main-brand-color-theme);
@@ -208,6 +216,15 @@
         transform: scale(105%);
         transition: all .15s linear;
     }
+
+}
+
+/* Small screen */
+@media screen and (max-width:1200px) {
+    .searchBar.active{
+        transition: width .25s linear;
+        width: 400px !important;
+    }
 }
 
 /* Mobile Header */
@@ -221,44 +238,56 @@
         from{left: 0%;}
         to{left: -100%;}
     }
-    .container.openNavbarMenu{
-        display: block !important;
-        animation: open .5s !important;
-        transition-property: left !important;
+    .innercontainer{
+        padding: 5px 0;
+        border-bottom: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .logo{
+        display: block;
+        height: 40px;
+        width: 40px;
+    }
+    .mobileNavbar{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;;
+        padding: .5rem 1rem;
+    }
+    .desktopNavbar{
+        display: block;
+        position: fixed;
+        top: 61px;
+        left: -100%;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+        outline: 0;
+        background-color: white;
+        width: 75vw;
+        height: calc(100vh - 60px);
+        box-shadow: 0px 0px 5px #ccc;
+        transition: all .25s linear;
+    }
+    .desktopNavbar.openNavbarMenu{
         left: 0 !important;
     }
-    .container{
-        position: fixed;
-        width: 250px;
-        height: 100%;
-        top: 0;
-        left: -100%;
-        background-color: white;
-        overflow-y: auto;
-        overflow-x: hidden;
-        /* display: none; */
-        animation: close .5s;
-    }
-
-
+    .navbarBrand{
+            display: none;
+        }
     .navbarMenu{
         display: block;
         list-style: none;
-        position: fixed;
-        background-color: white;
-        width: max-content;
-        height: auto !important;
-        margin: 0;
-        padding: 0;
-        top: 55px;
-        box-shadow: 1px 1px 1px #ccc;
-        z-index: 30;
-        box-shadow: none;
+        padding: 20px 0;
     }
+    
     .navbarMenuItem{
         position: relative;
         display: block;
-        padding-right: 20px;
     }
 
     .navbarMenuItem>a{
@@ -268,12 +297,12 @@
         box-shadow: none;
         letter-spacing: 0.5px;
         transition: all .25s ease;
-        padding-top: 10px;
-        padding-bottom: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         height: max-content;
-        font-size: 16px;
-        font-weight: 600;
-        padding-left: 10px;
+        font-size: 14px;
+        font-weight: 500;
+        padding-left: 5px;
         border-left: 5px solid transparent;
     }
     .navbarMenuItem .firstItem{
@@ -282,14 +311,22 @@
     .navbarMenuItem:last-child a{
         color: var(--main-brand-color-theme);
     }
+    .navbarMenuItem a:hover  {
+        color: var(--main-brand-color-theme) !important;
+        transition: color .15s linear;
+    }
+    .navbarMenuItem:last-child a:hover{
+        text-shadow: 0 0 1px var(--main-brand-color-theme) !important;
+        transition: all .15s linear;
+    }
+    
     .subMenu{
         margin-top: 0;
         position: relative;
         z-index: 30;
         min-width: 160px;
-        padding: 0 15px;
+        padding: 0 5px;
         margin: 2px 0 0;
-        font-size: 14px;
         text-align: left;
         list-style: none;
         
@@ -300,64 +337,117 @@
         padding: 5px 20px;
         color: #585858;
         display: block;
-        font-weight: 400;
+        font-weight: 300;
         line-height: 1.428571429;
         white-space: nowrap;
         padding-right: 50px;
     }
-    .navbarMenuItem a:hover  {
-        color: var(--main-brand-color-theme);
-        transition: all .25s ease-in-out;
-    }
-    .navbarMenuItem:last-child a:hover{
-        color: rgb(49, 49, 49);
-    }
+    
     .subMenu>li>a:hover{
         background-color: #cecece2f;
         color: #4a4a4a;
         transition: all .15s ease;
     }
-    
-    .socialSearch{
-        display: block;
-        position: relative;
-        top: 20px;
-        
-    }
-    .navbarSearch{
+    .social{
+        display: flex;
         float: right;
-        padding: 0 15px;
-        border-top: 1px solid transparent;
-        border-bottom: 1px solid transparent;
-        z-index: 30;
-        width: fit-content;
-        margin-left: 0;
+        width: auto;
+        align-items: center;
+        margin-right: 16px;
+        transition: all .5s linear;
+        right: 0;
     }
-    .searchQuery{
+    .active{
+        transition: all .5s ease-in-out;
+        transition-delay: .25s !important;
+    }
+    .social.active{
+        position: absolute;
+        right: -46px;
+    }
+    .socialSearch{
+        position: relative;
+        z-index: 100;
+    }
+    .searchInput{
+        position: absolute;
+        z-index: 1;
+        display: block;
+        right: -5px;
+        top: 4px;
+    }
+    .searchBar{
         display: inline-block;
         vertical-align: middle;
-        border: 1px solid #777777;
-        color:  #777777;
+        color:  #919191;
         text-shadow: 0 0 1px #ccc !important;
-        background: none;
-        border-radius: 3px;
-        transition: all 0.25s ease-in-out;
-        width: 160px;
-        box-shadow: none;
+        background: white;
+        width: 0;
         line-height: 20px;
         height: 34px;
-        padding: 6px 12px;
         font-size: 14px;
+        right: -5px;
+        /* transition: all .1s linear; */
     }
-    .searchQuery::placeholder{
-        color: #777777;
+    .searchBar.active{
+        border-radius: 8px;
+        
+        position: absolute;
+        width: 246px !important;
+        border: 2px solid #919191;
+        padding: 4px 35px 6px 12px;
     }
-    .searchQuery:focus{
+    .searchBar::placeholder{
+        color: var(--gray);
+    }
+    .searchBar.whiteHeader::placeholder{
+        color: #4a4a4a;
+    }
+    .searchBar:focus{
         outline: none;
         border-color: var(--main-brand-color-theme);
     }
     
     .socialLogo{
-        display: none !important;
+        color: var(--gray-dark);
+        display: flex;
+        align-items: center;
+        font-size: 10px;
+        line-height: 0;
+        cursor: pointer;
+        transition: all .25s ease-in-out;
+    }
+    .socialLogo:first-child{
+        position: relative;
+        z-index: 2;
+        height: 41px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .fbLogo, .igLogo{
+        display: none;
+        height: 41px;
+        margin-left: 15px;
+        font-size: 13px;
+    }
+    .socialLogo.whiteHeader{
+        color:#4a4a4a
+    }
+    .avatar{
+        margin-left: 16px;
+        background-image: url('../../../../images/avatar/sss-avatar.jpg');
+        background-size: 35px 35px;
+        height: 35px;
+        width: 35px;
+        border-radius: 35px;
+        transition: all .25s linear !important;
+        background-position: 50%;
+        visibility: visible;
+        opacity: 1;
+        transition-delay: .25s;
+    }
+    .avatar.active{
+        visibility: hidden;
+        opacity: 0;
     }
 }
